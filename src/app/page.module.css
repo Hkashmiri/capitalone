@@ -1,0 +1,239 @@
+/* Hero Styles */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+  background-image: url("/landingbg.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100svh - 150px);
+}
+
+.hero-left {
+  flex: 1;
+  padding-left: 100px;
+  padding-right: 200px;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  font-weight: normal;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.hero-left a:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--rich-green);
+  color: white;
+  font-size: 0.8rem;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-right img {
+  border-radius: 10px;
+}
+
+/* Identity Section */
+.identity {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 500px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.identity img {
+  height: 500px;
+  padding: 50px;
+}
+
+.identity p {
+  text-align: right;
+  font-size: 3rem;
+  width: 550px;
+  margin-bottom: 30px;
+}
+
+.get-started {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.enroll {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Educate Section */
+.educate {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 100px;
+  padding-right: 100px;
+  height: 500px;
+  background-color: #ebfef2;
+  margin-bottom: 50px;
+}
+
+.educate h1 {
+  margin-bottom: 10px;
+}
+
+.educate img {
+  padding: 50px;
+}
+
+.educate-left {
+  padding: 50px;
+}
+
+.cards {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    padding: 50px;
+    min-height: 600px;
+  }
+
+  .hero-left,
+  .hero-right {
+    flex: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  .hero-left {
+    margin-bottom: 20px;
+  }
+
+  .hero-left h1 {
+    font-size: 2.5rem;
+  }
+
+  .identity,
+  .educate {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    height: auto;
+  }
+
+  .identity img,
+  .educate-left {
+    margin: 20px;
+  }
+
+  .identity img,
+  .educate img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .identity p,
+  .educate h1 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .enroll,
+  .get-started {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .hero-left a:last-child {
+    width: 80px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+
+  .identity p,
+  .educate h1 {
+    font-size: 2.2rem;
+  }
+
+  .identity,
+  .educate {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .enroll,
+  .get-started {
+    justify-content: center;
+  }
+
+  .hero-right img {
+    width: 500px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 20px;
+    min-height: 300px;
+  }
+
+  .hero-right img {
+    width: 260px;
+    height: 150px;
+  }
+
+  .hero-left h1 {
+    font-size: 1.5rem;
+  }
+
+  .identity,
+  .educate {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .identity img,
+  .educate img {
+    padding: 0;
+    width: 200px;
+    height: 200px;
+  }
+
+  .identity p,
+  .educate h1 {
+    font-size: 1.5rem;
+  }
+
+  .enroll,
+  .get-started {
+    justify-content: center;
+  }
+}
